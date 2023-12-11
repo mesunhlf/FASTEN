@@ -24,9 +24,13 @@ pytorch **1.4.0**
 
 ### 4. Run the Code  
 **4.1 Training Ensembles**
+
 `train.sh`: Train the ensemble models by using different methods. 
 
 For example, you can run the shell in `train.sh`.
+
+Baseline ensemble：
+`python train/train_baseline.py --gpu $GPUID --model-num 3 --batch-size 128 --num-class 10 --arch "ResNet" --depth 20 --epoch 200`
 
 FASTEN ensemble: 
 `python train/train_fasten.py --gpu $GPUID --model-num 3 --distill-eps 0.06 --distill-alpha 0.06 --distill-steps 1 --beta 3.0 --batch-size 128 --num-class 10 --arch "ResNet" --depth 20 --epoch 200`
@@ -35,6 +39,7 @@ DVERGE ensemble:
 `python train/train_dverge.py --gpu $GPUID --model-num 3 --distill-eps 0.07 --distill-alpha 0.007 --distill-steps 10 --batch-size 128 --num-class 10 --arch "ResNet" --depth 20 --epoch 200`
 
 **4.2 Testing Ensembles**
+
 `evaluation.sh`: Generate transferable examples / Test robustness under white or black box scenarios.
 
 For example, you can run the `evaluation.sh` to generate black-box adversarial examples:
