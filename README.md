@@ -14,9 +14,11 @@ pytorch **1.4.0**
 
 ### 3. Pipeline 
 **3.1 Augmentation Mechinasm**
+
 <img src="/figure/overview.png" width = "700" height = "200" align=center/>
 
 **3.2 Optimization Mechinasm**
+
 <img src="/figure/overview2.png" width = "500" height = "200" align=center/>
 
 
