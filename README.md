@@ -4,7 +4,7 @@
 
 FASTEN: Fast Ensemble Learning For Improved Adversarial Robustness
 
-The code is repository for ["FASTEN: Fast Ensemble Learning For Improved Adversarial Robustness"](https://ieeexplore.ieee.org/abstract/document/10102830) (IEEE TIFS).
+The code is repository for "[FASTEN: Fast Ensemble Learning For Improved Adversarial Robustness](https://ieeexplore.ieee.org/document/10329935)" (IEEE TIFS).
 
 
 ### 2. Prerequisites
