@@ -42,17 +42,17 @@ DVERGE ensemble:
 
 `evaluation.sh`: Generate transferable examples / Test robustness under white or black box scenarios.
 
-For example, you can run the `evaluation.sh` to generate black-box adversarial examples:
-`file_baseline="checkpoints/baseline/seed_0/3_ResNet20/epoch_200.pth"`
-`python eval/generate_bbox_mpgd.py --num-steps 10 --model-file $file_baseline`
+For example, you can run the `evaluation.sh` to generate black-box adversarial examples:  
+`file_baseline="checkpoints/baseline/seed_0/3_ResNet20/epoch_200.pth"`  
+`python eval/generate_bbox_mpgd.py --num-steps 10 --model-file $file_baseline`  
 
-After producing the adversarial examples, you can run the shell to test black-box robustness:
-`file="checkpoints/fasten/seed_0/3_ResNet20/eps0.06_steps1_beta3.0/epoch_200.pth"`
+After producing the adversarial examples, you can run the shell to test black-box robustness:  
+`file="checkpoints/fasten/seed_0/3_ResNet20/eps0.06_steps1_beta3.0/epoch_200.pth"`  
 `python eval/eval_bbox.py --gpu $GPUID --model-file $path --folder transfer_adv_examples --steps 100 --num-class 10 --arch "ResNet" --depth 20 --save-to-csv`
 
-Or you can test white-box robustness of FASTEN under the PGD attack in `evaluation.sh`:
-`file="checkpoints/fasten/seed_0/3_ResNet20/eps0.06_steps1_beta3.0/epoch_200.pth"`
-`python eval/eval_wbox_pgd.py --gpu $GPUID --model-file $file --steps 10 --random-start 5 --save-to-csv`
+Or you can test white-box robustness of FASTEN under the PGD attack in `evaluation.sh`:  
+`file="checkpoints/fasten/seed_0/3_ResNet20/eps0.06_steps1_beta3.0/epoch_200.pth"`  
+`python eval/eval_wbox_pgd.py --gpu $GPUID --model-file $file --steps 10 --random-start 5 --save-to-csv`  
 
 ### 5. Experimental Results
 
